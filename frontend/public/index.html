@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sistema Médico - Consulta de resultados, agendamiento de citas y servicios médicos de calidad."
+    />
+    <meta
+      name="keywords"
+      content="salud, medicina, laboratorio, estudios médicos, resultados médicos"
+    />
+    <meta name="author" content="Joshua Olvera Cruz" />
+
+    <!-- Favicon (provisional) -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/components/navbar.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/components/cards.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/pages/home.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <title>Sistema Médico - Inicio</title>
+  </head>
+  <body>
+    <!-- ===================================
+         NAVBAR - BARRA DE NAVEGACIÓN
+         =================================== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <a href="index.html" class="navbar-logo">
+          <i class="fas fa-heartbeat"></i>
+          <span>Sistema Médico</span>
+        </a>
+
+        <!-- Menu Toggle (móvil) -->
+        <button
+          class="navbar-toggle"
+          id="navbar-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="toggle-icon"></span>
+          <span class="toggle-icon"></span>
+          <span class="toggle-icon"></span>
+        </button>
+
+        <!-- Links de navegación -->
+        <ul class="navbar-menu" id="navbar-menu">
+          <li><a href="index.html" class="navbar-link active">Inicio</a></li>
+          <li><a href="servicios.html" class="navbar-link">Servicios</a></li>
+          <li><a href="nosotros.html" class="navbar-link">Nosotros</a></li>
+          <li><a href="contacto.html" class="navbar-link">Contacto</a></li>
+          <li><a href="resultados.html" class="navbar-link">Resultados</a></li>
+        </ul>
+
+        <!-- Botones de acción -->
+        <div class="navbar-actions">
+          <a href="login.html" class="btn btn-secondary btn-sm">
+            <i class="fas fa-user"></i> Iniciar Sesión
+          </a>
+          <a href="#agendar-cita" class="btn btn-primary btn-sm">
+            <i class="fas fa-calendar-check"></i> Agendar Cita
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================================
+         HERO SECTION - BANNER PRINCIPAL
+         =================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-background"></div>
+      <div class="hero-content">
+        <div class="container">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Tu Salud es Nuestra <span class="text-highlight">Prioridad</span>
+            </h1>
+            <p class="hero-subtitle">
+              Servicios médicos de calidad al alcance de todos. Consulta tus
+              resultados, agenda citas y cuida tu salud con nosotros.
+            </p>
+            <div class="hero-buttons">
+              <a href="#servicios" class="btn btn-primary btn-lg">
+                <i class="fas fa-stethoscope"></i> Ver Servicios
+              </a>
+              <a
+                href="resultados.html"
+                class="btn btn-secondary-outline btn-lg"
+              >
+                <i class="fas fa-file-medical"></i> Consultar Resultados
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#servicios" class="hero-scroll">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================================
+         SERVICIOS - CARDS DE SERVICIOS
+         =================================== -->
+    <section class="services" id="servicios">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nuestros Servicios</h2>
+          <p class="section-subtitle">
+            Ofrecemos una amplia gama de servicios médicos con la más alta
+            calidad y tecnología
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Laboratorio -->
+          <div class="service-card">
+            <div class="service-icon" style="background-color: #00a651">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3 class="service-title">Laboratorio Clínico</h3>
+            <p class="service-description">
+              Análisis clínicos con resultados rápidos y precisos. Química
+              sanguínea, biometría hemática y más.
+            </p>
+            <a href="servicios.html#laboratorio" class="service-link">
+              Conocer más <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Servicio 2: Imagenología -->
+          <div class="service-card">
+            <div class="service-icon" style="background-color: #0066b2">
+              <i class="fas fa-x-ray"></i>
+            </div>
+            <h3 class="service-title">Imagenología</h3>
+            <p class="service-description">
+              Estudios de imagen con equipo de última generación. Radiografías,
+              tomografías y más.
+            </p>
+            <a href="servicios.html#imagenologia" class="service-link">
+              Conocer más <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Servicio 3: Ultrasonido -->
+          <div class="service-card">
+            <div class="service-icon" style="background-color: #ff6b35">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3 class="service-title">Ultrasonido</h3>
+            <p class="service-description">
+              Ultrasonidos obstétricos, abdominales y más. Tecnología de punta
+              para diagnóstico preciso.
+            </p>
+            <a href="servicios.html#ultrasonido" class="service-link">
+              Conocer más <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Servicio 4: Mastografía -->
+          <div class="service-card">
+            <div class="service-icon" style="background-color: #9b59b6">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h3 class="service-title">Mastografía</h3>
+            <p class="service-description">
+              Detección temprana de cáncer de mama. Mastografías digitales con
+              interpretación especializada.
+            </p>
+            <a href="servicios.html#mastografia" class="service-link">
+              Conocer más <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Servicio 5: Consultas -->
+          <div class="service-card">
+            <div class="service-icon" style="background-color: #3498db">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3 class="service-title">Consultas Médicas</h3>
+            <p class="service-description">
+              Atención médica general y especializada. Medicina general,
+              pediatría y más.
+            </p>
+            <a href="servicios.html#consultas" class="service-link">
+              Conocer más <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Servicio 6: Rayos X -->
+          <div class="service-card">
+            <div class="service-icon" style="background-color: #e74c3c">
+              <i class="fas fa-radiation"></i>
+            </div>
+            <h3 class="service-title">Rayos X</h3>
+            <p class="service-description">
+              Estudios radiológicos completos. Rayos X de tórax, extremidades y
+              más.
+            </p>
+            <a href="servicios.html#rayosx" class="service-link">
+              Conocer más <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================
+         CONSULTA DE RESULTADOS
+         =================================== -->
+    <section class="results-section" id="consulta-resultados">
+      <div class="container">
+        <div class="results-content">
+          <div class="results-info">
+            <h2 class="results-title">Consulta tus Resultados</h2>
+            <p class="results-description">
+              Ingresa el número de folio de tu ticket (RSV u OPC) para consultar
+              y descargar tus resultados médicos de forma rápida y segura.
+            </p>
+            <ul class="results-features">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Resultados disponibles en 24-48 horas</span>
+              </li>
+              <li>
+                <i class="fas fa-lock"></i>
+                <span>Consulta segura y confidencial</span>
+              </li>
+              <li>
+                <i class="fas fa-download"></i>
+                <span>Descarga en PDF</span>
+              </li>
+              <li>
+                <i class="fas fa-history"></i>
+                <span>Historial de estudios</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="results-form-container">
+            <form class="results-form" id="results-form">
+              <div class="form-header">
+                <i class="fas fa-file-medical-alt"></i>
+                <h3>Buscar Resultados</h3>
+              </div>
+
+              <div class="form-group">
+                <label for="ticket-number">Número de Folio</label>
+                <input
+                  type="text"
+                  id="ticket-number"
+                  name="ticket-number"
+                  placeholder="Ej: RSV123456 o OPC789012"
+                  required
+                />
+                <small class="form-hint">
+                  <i class="fas fa-info-circle"></i>
+                  Encuentra tu folio en tu ticket de servicio
+                </small>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-search"></i> Buscar Resultados
+              </button>
+
+              <div class="form-footer">
+                <p>
+                  ¿No tienes tu folio? <a href="contacto.html">Contáctanos</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================
+         ¿POR QUÉ ELEGIRNOS?
+         =================================== -->
+    <section class="why-us" id="por-que-elegirnos">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+          <p class="section-subtitle">Comprometidos con tu salud y bienestar</p>
+        </div>
+
+        <div class="why-us-grid">
+          <div class="why-us-card">
+            <div class="why-us-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Calidad Certificada</h3>
+            <p>
+              Laboratorios certificados con los más altos estándares de calidad
+            </p>
+          </div>
+
+          <div class="why-us-card">
+            <div class="why-us-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>Precios Accesibles</h3>
+            <p>Servicios médicos de calidad a precios justos para todos</p>
+          </div>
+
+          <div class="why-us-card">
+            <div class="why-us-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Resultados Rápidos</h3>
+            <p>Obtén tus resultados en 24-48 horas o el mismo día</p>
+          </div>
+
+          <div class="why-us-card">
+            <div class="why-us-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3>Profesionales Expertos</h3>
+            <p>Personal médico altamente capacitado y certificado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================
+         TESTIMONIOS
+         =================================== -->
+    <section class="testimonials" id="testimonios">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lo Que Dicen Nuestros Pacientes</h2>
+          <p class="section-subtitle">Miles de personas confían en nosotros</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Excelente servicio, resultados rápidos y personal muy amable.
+              Definitivamente volveré para mis próximos estudios."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>María González</h4>
+                <p>Paciente frecuente</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Precios muy accesibles y atención de primera. La plataforma en
+              línea hace todo más fácil."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Carlos Ramírez</h4>
+                <p>Paciente nuevo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Llevo años haciéndome mis estudios aquí. Siempre profesionales y
+              con equipos modernos."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Ana López</h4>
+                <p>Paciente desde 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================
+         FOOTER - PIE DE PÁGINA
+         =================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Columna 1: Logo y descripción -->
+          <div class="footer-column">
+            <div class="footer-logo">
+              <i class="fas fa-heartbeat"></i>
+              <span>Sistema Médico</span>
+            </div>
+            <p class="footer-description">
+              Servicios médicos de calidad al alcance de todos. Cuidamos de tu
+              salud con profesionalismo y calidez.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Columna 2: Enlaces rápidos -->
+          <div class="footer-column">
+            <h3 class="footer-title">Enlaces Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="resultados.html">Consultar Resultados</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 3: Servicios -->
+          <div class="footer-column">
+            <h3 class="footer-title">Servicios</h3>
+            <ul class="footer-links">
+              <li><a href="servicios.html#laboratorio">Laboratorio</a></li>
+              <li><a href="servicios.html#imagenologia">Imagenología</a></li>
+              <li><a href="servicios.html#ultrasonido">Ultrasonido</a></li>
+              <li><a href="servicios.html#mastografia">Mastografía</a></li>
+              <li><a href="servicios.html#consultas">Consultas</a></li>
+            </ul>
+          </div>
+
+          <!-- Columna 4: Contacto -->
+          <div class="footer-column">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Ciudad de México, CDMX</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>55 1234 5678</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>contacto@sistemamedico.com</span>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <span>Lun - Sáb: 7:00 AM - 9:00 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sistema Médico. Todos los derechos reservados.</p>
+          <div class="footer-legal">
+            <a href="#">Términos de Servicio</a>
+            <span>|</span>
+            <a href="#">Política de Privacidad</a>
+            <span>|</span>
+            <a href="#">Aviso Legal</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a
+      href="https://wa.me/5512345678"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botón scroll to top -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Volver arriba">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/config.js"></script>
+    <script src="../js/components/navbar.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
+ 

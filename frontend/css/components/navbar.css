@@ -1,0 +1,226 @@
+/* ===================================
+   NAVBAR - BARRA DE NAVEGACIÓN
+   =================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: var(--navbar-bg);
+  box-shadow: var(--navbar-shadow);
+  z-index: var(--z-fixed);
+  transition: all var(--transition-base);
+}
+
+/* Navbar con scroll (añadir clase con JS) */
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.navbar-logo i {
+  font-size: var(--font-2xl);
+}
+
+.navbar-logo:hover {
+  color: var(--color-primary-dark);
+  transform: scale(1.05);
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  position: relative;
+  font-size: var(--font-base);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: var(--spacing-2) 0;
+  transition: color var(--transition-fast);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--color-primary);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+/* ===== BOTONES DE ACCIÓN ===== */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+/* ===== TOGGLE BUTTON (Hamburger - Móvil) ===== */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: var(--z-fixed);
+}
+
+.toggle-icon {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-primary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+/* Animación del toggle cuando está activo */
+.navbar-toggle.active .toggle-icon:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar-toggle.active .toggle-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .toggle-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===================================
+   RESPONSIVE - TABLETS Y MÓVILES
+   =================================== */
+
+@media (max-width: 1024px) {
+  .navbar-actions .btn {
+    font-size: var(--font-sm);
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+
+  .navbar-menu {
+    gap: var(--spacing-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    background-color: var(--bg-white);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    padding: var(--spacing-6) 0;
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+    box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color-light);
+  }
+
+  .navbar-link {
+    display: block;
+    padding: var(--spacing-4) var(--spacing-6);
+    font-size: var(--font-lg);
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+
+  .navbar-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    padding: var(--spacing-4);
+    flex-direction: column;
+    gap: var(--spacing-3);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+  }
+
+  .navbar-menu.active ~ .navbar-actions {
+    transform: translateX(0);
+  }
+
+  .navbar-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo span {
+    font-size: var(--font-base);
+  }
+
+  .navbar-logo i {
+    font-size: var(--font-xl);
+  }
+}
